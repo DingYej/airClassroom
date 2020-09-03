@@ -1,0 +1,689 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-weight: 800;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 12px;
+    color: #333333;
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+}
+
+
+/* ===================================********************* */
+
+.Home {
+    width: 100%;
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+.middle {
+    width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 头部开始 */
+
+.head {
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+}
+
+.head_k {
+    width: 1200px;
+    height: 120px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head_k .logo {
+    display: flex;
+    align-items: center;
+}
+
+.head_k .logo p {
+    margin-right: 17px;
+}
+
+.nav {
+    font-size: 20px;
+    display: flex;
+}
+
+.nav li {
+    margin: 0 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav>li:after {
+    content: '';
+    position: absolute;
+    left: 27px;
+    top: 30px;
+    bottom: 5px;
+    right: 0;
+    height: 3px;
+    width: 30px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.nav>li:nth-child(1):after {
+    left: 6px;
+}
+
+.nav .active:after {
+    background-color: #155bce;
+}
+
+.nav .active {
+    color: #155bce;
+}
+
+.login {
+    font-size: 14px;
+    display: flex;
+}
+
+.login>li+li:before {
+    color: #000;
+    content: "|";
+    padding: 0 5px;
+    position: relative;
+    top: -1px;
+}
+
+
+/* 头部结束 */
+
+
+/* banner开始 */
+
+.banner {
+    width: 1200px;
+    height: 350px;
+    overflow: hidden;
+    margin: 28px 0;
+    border-radius: 5px;
+}
+
+.banner .subBanner {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* banner结束 */
+
+
+/* 直播日历开始 */
+
+.liveBroadcast {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.liveBroadcast>p {
+    margin: 4px auto 30px;
+}
+
+.liveBtn {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.liveBtn p {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    margin: 0 10px;
+}
+
+.calendar {
+    font-size: 14px;
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.calendar li {
+    color: #155bce;
+    border: 2px solid #155bce;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 18px;
+    margin: 0 10px;
+}
+
+.calendar li span:nth-child(1) {
+    margin-bottom: 8px;
+}
+
+.calendar .actives {
+    color: #fff;
+    background-color: #155bce;
+    opacity: .9;
+}
+
+.Home .liveList {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.liveList>div {
+    width: 526px;
+    padding: 20px;
+    border: 1px solid #f0f3f9;
+    height: 150px;
+    overflow: hidden;
+}
+
+.liveList>div p {
+    width: 200px;
+    height: 150px;
+    background-color: #6b8ac5;
+    float: left;
+}
+
+.liveList>div div {
+    float: left;
+    margin-left: 18px;
+}
+
+.liveList>div div span {
+    display: block;
+}
+
+.time,
+.grade,
+.speaker {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.time i,
+.grade i,
+.speaker i {
+    color: #333;
+    margin-left: 8px;
+}
+
+.liveListBtn {
+    font-size: 14px;
+    color: #155bce;
+    /* background-color: #155bce; */
+    border-radius: 20px;
+    border: 1px solid #155bce;
+    width: 100px;
+    text-align: center;
+    padding: 6px 0;
+    margin: 14px 0 14px;
+    cursor: pointer;
+}
+
+.introduce {
+    font-size: 14px;
+    color: #666666;
+    width: 308px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 22px;
+}
+
+.Home .tcis {
+    background-color: #f0f3f9;
+}
+
+.Home .tcis .liveListBtn {
+    background: #155bce;
+    color: #fff
+}
+
+.liveBtn span {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #dadada;
+    border: 2px solid #dadada;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.liveBtn .choose {
+    border: 2px solid #155bce;
+    color: #155bce;
+}
+
+
+/* 直播日历结束 */
+
+
+/* 免费试听开始 */
+
+.Free {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 52px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Free>p {
+    margin: 0 auto 34px;
+    overflow: hidden;
+}
+
+.FreeList {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.FreeList>.selected:hover {
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    box-shadow: 4px 33px 16px -34px rgba(0, 36, 100, .3);
+    -webkit-box-shadow: 4px 33px 16px -34px rgba(0, 36, 100, .3);
+    -moz-box-shadow: 4px 33px 16px -34px rgba(0, 36, 100, .3);
+    transition: all .3s ease;
+    color: #155bce;
+}
+
+.FreeList>.selected .FreeList_Time {
+    color: #155bce;
+}
+
+.FreeList>.selected .FreeList_Btn {
+    background-color: #155bce;
+    color: #fff;
+}
+
+.FreeList>div {
+    width: 380px;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+
+.FreeList>div p {
+    width: 380px;
+    height: 200px;
+    background-color: #666666;
+}
+
+.FreeList_k {
+    padding: 18px;
+    background-color: #fff;
+}
+
+.FreeList_k>h5 {
+    font-size: 16px;
+    line-height: 25px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.FreeList_k>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.FreeList_Time {
+    font-size: 14px;
+    color: #333333;
+}
+
+.FreeList_Btn {
+    border: 1px solid #155bce;
+    color: #155bce;
+    padding: 4px 20px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* 免费试听结束 */
+
+
+/* 精彩回放开始 */
+
+.playback {
+    padding: 24px 18px 18px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.playback>p {
+    margin: 0 auto 33px;
+    overflow: hidden;
+}
+
+.playbackList {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playbackList>div {
+    border: 1px solid #f0f3f9;
+    padding: 15px;
+    width: 245px;
+    overflow: hidden;
+}
+
+.playbackList>div p {
+    width: 245px;
+    height: 180px;
+    background-color: #6b8ac5;
+}
+
+.playbackList>div h3 {
+    font-size: 15px;
+    line-height: 25px;
+    margin: 5px 0 10px;
+}
+
+.playbackList>div span {
+    font-size: 14px;
+    border: 1px solid #155bce;
+    color: #155bce;
+    padding: 5px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.Home .wonderful {
+    background-color: #f0f3f9;
+}
+
+.Home .wonderful span {
+    background-color: #155bce;
+    color: #fff;
+}
+
+.Home .wonderful h3 {
+    color: #155bce;
+}
+
+
+/* 精彩回放结束 */
+
+
+/* 外教师资开始 */
+
+.teachers {
+    width: 1200px;
+    height: 415px;
+    background: url(../images/teacher.png) no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.teachers_k {
+    padding: 0 0 56px 154px;
+    display: flex;
+}
+
+.teachers>p {
+    overflow: hidden;
+    margin: 25px auto 16px;
+}
+
+.teacherIntroduced {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-left: 65px;
+    position: relative;
+    top: 0;
+    right: -500px;
+    opacity: 0;
+}
+
+.teacherIntroduced p {
+    margin: 24px 0;
+    overflow: hidden;
+}
+
+.teacherIntroduced p span {
+    font-size: 30px;
+    color: #155bce;
+}
+
+.teacherIntroduced p i {
+    font-size: 20px;
+    color: #155bce;
+    margin-left: 10px;
+}
+
+.teacherIntroduced h2 {
+    font-size: 24px;
+    color: #ff6600;
+    margin-bottom: 27px;
+}
+
+.teacherIntroduced>span {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.teachers_k img {
+    position: relative;
+    top: 0;
+    left: -300px;
+    opacity: 0;
+}
+
+
+/* 外教师资结束 */
+
+.Vocabulary {
+    padding: 25px 98px 48px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.Vocabulary p {
+    margin: 0 auto 30px;
+}
+
+.Vocabularylist {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Primary {
+    position: relative;
+    top: 0;
+    left: -200px;
+    opacity: 0;
+}
+
+.Er {
+    position: relative;
+    top: 0;
+    right: -200px;
+    opacity: 0;
+}
