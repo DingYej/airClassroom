@@ -200,7 +200,7 @@ body {
 }
 
 .nav li {
-    margin: 0 30px;
+    margin: 0 13px;
     position: relative;
     cursor: pointer;
 }
@@ -209,7 +209,7 @@ body {
     content: '';
     position: absolute;
     left: 27px;
-    top: 30px;
+    top: 26px;
     bottom: 5px;
     right: 0;
     height: 3px;

@@ -19,3 +19,13 @@ event.mouseoverEven(".courseList div", function() {
 event.mouseleaveEven(".courseList div", function() {
     $(this).removeClass("courseListActive")
 })
+
+event.clickEven("#grade li", function() {
+    $(this).addClass("active").siblings().removeClass("active")
+})
+event.clickEven("#classification li", function() {
+    $(this).addClass("active").siblings().removeClass("active")
+})
+event.clickEven("#sorting li", function() {
+    $(this).addClass("active").siblings().removeClass("active")
+})

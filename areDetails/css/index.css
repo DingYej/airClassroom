@@ -150,13 +150,13 @@ body {
     -khtml-user-select: none;
     /*早期浏览器*/
     user-select: none;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 
 /* ===================================********************* */
 
-.Course {
+.areDetails {
     width: 100%;
     overflow: hidden;
     min-width: 1200px;
@@ -244,6 +244,12 @@ body {
     top: -1px;
 }
 
+.login>p span {
+    color: #155bce;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
 
 /* 头部结束 */
 
@@ -254,145 +260,178 @@ body {
     width: 100%;
     overflow: hidden;
     min-width: 1200px;
-    margin-top: 28px;
 }
 
-.optional {
+
+/* 面包屑 */
+
+.crumbs {
+    overflow: hidden;
+    display: flex;
+    color: #999999;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+.crumbs ul {
+    display: flex;
+}
+
+.crumbs ul li:nth-child(1) {
+    color: #333;
+}
+
+.crumbs ul>li+li:before {
+    color: #999999;
+    content: ">";
+    padding: 0 5px;
+    position: relative;
+    top: -1px;
+}
+
+
+/* 表格 */
+
+.detailsForm {
     padding: 20px;
-    overflow: hidden;
     background-color: #fff;
-    margin-bottom: 30px;
-}
-
-.optionalList {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px dashed #dbdbdb;
-    padding: 12px 0;
-}
-
-.optionalList:last-child {
-    border: 0;
-}
-
-.optionalList>p {
-    font-size: 14px;
-    color: #000000;
-    margin-right: 10px;
-}
-
-.optionalList>ul {
-    display: flex;
     overflow: hidden;
 }
 
-.optionalList>ul li {
-    padding: 5px 14px;
-    font-size: 14px;
-    border-radius: 5px;
+.detailsForm .layui-table-cell {
+    height: 50px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+#lock {
+    border-radius: 20px;
+    border: 1px solid #155bce;
+    color: #155bce;
+    line-height: 20px;
+    margin-top: 10px;
+    padding: 5px;
     cursor: pointer;
 }
 
-.optional .active {
-    background-color: #6b8ac5;
+#courseName {
+    font-weight: 700;
+}
+
+.detailsForm .layui-table-hover #courseName {
+    color: #155bce;
+}
+
+.detailsForm .layui-table-hover #lock {
+    background: #155bce;
     color: #fff;
+}
+
+.detailsForm .layui-table-page {
+    border-width: 0;
+    float: right;
+    height: 60px;
+}
+
+.detailsForm #layui-table-page1 {
+    float: right;
+    margin-top: 17px;
+}
+
+.detailsForm #layui-table-page1 .layui-laypage-em {
+    background-color: #155bce;
 }
 
 
 /* 内容区结束 */
 
 
-/* 课程列表开始 */
+/* 弹出层开始 */
 
-.courseList {
-    padding: 30px 0 0 20px;
-    background: #fff;
-    display: flex;
-    flex-wrap: wrap;
+.prompt_t {
+    width: 580px;
+    height: 130px;
+    background: url(../images/wx.png) no-repeat;
+    background-size: 100% 100%;
 }
 
-.courseList>div {
-    overflow: hidden;
-    padding: 16px 14px;
-    border: 1px solid #f0f3f9;
-    width: 245px;
-    margin: 0 20px 30px 0;
-}
-
-.courseList>div .courseListimg {
-    width: 245px;
-    height: 180px;
-    background-color: #6b8ac5;
-}
-
-.courseList>div h6 {
-    font-size: 15px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    line-height: 20px;
-    margin-top: 16px;
-}
-
-.courseList>div .courseListtime {
-    overflow: hidden;
-    margin: 16px 0 14px;
-}
-
-.courseList>div .courseListtime span {
-    font-size: 14px;
+.prompt_t h2 {
+    font-size: 20px;
     font-weight: 700;
-    margin-right: 10px;
+    color: #6b8ac5;
+    margin: 30px 0 15px 32px;
 }
 
-.courseList>div .courseListBtn {
-    padding: 5px 18px;
-    border: 1px solid #155bce;
-    color: #155bce;
+.prompt_t p {
+    margin: 0 0 10px 32px;
+    font-size: 14px;
+}
+
+.prompt_b {
+    padding: 20px 32px;
+    background-color: #f0f3f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prompt_l {
+    overflow: hidden;
+}
+
+.prompt_l h3,
+.prompt_r h3 {
+    font-size: 16px;
+    color: #6b8ac5;
+    margin-bottom: 15px;
+}
+
+.prompt_l p {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.prompt_r p {
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+.prompt_l p span {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.prompt_r:after {
+    content: '';
+    position: absolute;
+    left: 388px;
+    top: 203px;
+    bottom: 0px;
+    right: 0;
+    height: 100px;
+    width: 2px;
+    background-color: #c8d3e9;
     border-radius: 20px;
-    cursor: pointer;
 }
 
-.paging {
-    background-color: #fff;
-    padding: 0 20px 30px;
-    overflow: hidden;
+#xx {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-#demo7 {
-    float: right;
+body .layui-layer-ico {
+    background: url(../images/xx.png) no-repeat;
 }
 
-#demo7 .layui-laypage-em {
-    background-color: #155bce;
+body .layui-layer-setwin .layui-layer-close2 {
+    background-position: 0 0;
+    top: -40px;
 }
 
-.courseListActive {
-    background: #f0f3f9;
-}
-
-.courseListActive h6 {
-    color: #155bce;
-}
-
-.courseListActive .courseListtime {
-    color: #155bce;
-}
-
-.courseList .courseListActive .courseListBtn {
-    color: #fff;
-    background: #155bce;
-}
-
-.banner {
-    width: 1200px;
-    height: 117px;
-    overflow: hidden;
-    margin: 30px 0;
+body .layui-layer-setwin .layui-layer-close2:hover {
+    background-position: 0 0;
 }
 
 
-/* 课程列表结束 */
+/* 弹出层结束 */
