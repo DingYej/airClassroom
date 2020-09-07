@@ -435,3 +435,31 @@ body .layui-layer-setwin .layui-layer-close2:hover {
 
 
 /* 弹出层结束 */
+
+
+/* 暂无课程开始 */
+
+.zw {
+    padding: 140px 0 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zw p {
+    font-size: 14px;
+    padding: 20px 0;
+    width: 300px;
+    text-align: center;
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    margin-top: 75px;
+}
+
+.zw p span {
+    color: #155bce;
+    cursor: pointer;
+}
+
+
+/* 暂无课程结束 */

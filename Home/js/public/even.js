@@ -44,3 +44,6 @@ var event = {
         }, 1000);
     }
 }
+event.clickEven(".nav li", function() {
+    $(this).addClass("active").siblings().removeClass("active")
+})
